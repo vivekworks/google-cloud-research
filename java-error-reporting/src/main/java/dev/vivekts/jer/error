@@ -1,0 +1,14 @@
+gcloud beta logging write --payload-type=json notify-errors-log-1 '
+{
+    "serviceContext": {
+        "service": "notify-1"
+    },                        
+    "message": "Notify-1",
+    "context": {
+        "reportLocation": {
+            "filePath": "/notify1",
+            "lineNumber": 12,
+            "functionName": "main"
+        }
+    }
+}'
