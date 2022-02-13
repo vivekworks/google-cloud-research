@@ -2,7 +2,7 @@
 
     <appender name="CLOUD" class="com.google.cloud.logging.logback.LoggingAppender">
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>INFO</level>
+            <level>TRACE</level>
         </filter>
         <log>application.log</log>
         <resourceType>global</resourceType>

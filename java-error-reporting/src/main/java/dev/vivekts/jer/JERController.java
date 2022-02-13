@@ -14,9 +14,10 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/jer")
+@Slf4j
 public class JERController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(JERController.class);
+    //private static final Logger LOGGER = LoggerFactory.getLogger(JERController.class);
 
 
     @GetMapping("/{value}")
@@ -24,7 +25,7 @@ public class JERController {
         if (value % 2 == 0) {
             return ResponseEntity.ok("Everything's alright!!!");
         } else {
-            LOGGER.error("Reporting Error on JERController " + value);
+            log.error("Reporting Error with Lombok Logger on JER Controller " + value);
             return ResponseEntity.ok("Reporting Error!!!");
         }
     }
